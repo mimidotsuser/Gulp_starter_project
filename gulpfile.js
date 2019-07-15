@@ -3,7 +3,6 @@ let sass=require('gulp-sass');
 let uglify=require('gulp-uglify');
 let ts=require('gulp-typescript');
 let autoprefixer=require('gulp-autoprefixer');
-let browserify=require('browserify');
 
 let paths={
     ts:{
@@ -44,19 +43,6 @@ function tsTask() {
         .pipe(tsProject())
         .pipe(uglify())
         .pipe(gulp.dest(paths.ts.dest))
-}
-function browserifyBundler() {
-    let bundler=browserify(
-        {
-            cache:{},
-            packagecache:{},
-            fullPaths: true,
-            debug: true,
-        }
-    );
-}
-
-function broswerfiyTask() {
 }
 
 function watch(){

@@ -1,3 +1,3 @@
-class Index{
-    
+export function init() {
+    alert()
 }
